@@ -50,6 +50,18 @@ output:
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
+.xe-banner {
+  position:fixed;
+  background:#866D4B;
+  color:rgba(255,255,255,0.5);
+}
+
+.remark-slide-number {
+  position:fixed;
+  bottom:10px;
+  color:white
+}
 ```
 
 ```{r,include=F}
@@ -67,12 +79,12 @@ require(ggpubr)
 
 ```{r xaringanExtra, echo = FALSE}
   xaringanExtra::use_progress_bar(color = "#866D4B", location = "top")
-  # xaringanExtra::use_banner(
-  #   top_left = "Stocks and Jobs: SPSA 2024",
-  #   top_right = "Bisbee & Clinton",
-  #   bottom_left = "[Link](https://www.jamesbisbee.com/StocksToShare/spsa_2024_presentation.html)",
-  #   exclude = c("title-slide")
-  # )
+  xaringanExtra::use_banner(
+    bottom_left = "Stocks and Jobs: SPSA 2024",
+    bottom_center = "Bisbee & Clinton",
+    # bottom_left = "jamesbisbee.com/StocksToShare/spsa_2024_presentation",
+    exclude = c("title-slide")
+  )
 ```
 
 
@@ -457,7 +469,7 @@ dat %>%
 
 # Stocks (outcome)
 
-```{r,echo=F,warning=F,message=F,fig.align='center',fig.width=16,fig.height=7,dpi=72}
+```{r,echo=F,warning=F,message=F,fig.align='center',fig.width=16,fig.height=6.5,dpi=72}
 require(plotly)
 p <- toanal %>%
   count(ReportingIndividualId,PoliticalParty,FullName) %>%
@@ -479,7 +491,7 @@ ggplotly(p,tooltip = 'text')
 
 # Stocks (outcome)
 
-```{r,echo=F,warning=F,message=F,fig.align='center',fig.width=16,fig.height=7,dpi=72}
+```{r,echo=F,warning=F,message=F,fig.align='center',fig.width=16,fig.height=6.5,dpi=72}
 p <- toanal %>%
   filter(TransactionType %in% c('BUY','SELL')) %>%
   group_by(ReportingIndividualId,PoliticalParty,FullName,TransactionType) %>%
@@ -586,7 +598,7 @@ ggplotly(p,tooltip = 'text')
 
 # Jobs (predictor): Apple Example
 
-```{r,echo=F,warning=F,message=F,fig.align='center',fig.width=16,fig.height=7,dpi=72}
+```{r,echo=F,warning=F,message=F,fig.align='center',fig.width=16,fig.height=6.5,dpi=72}
 require(maps)
 usa <- map_data('usa')
 require(ggthemes)
@@ -615,7 +627,7 @@ ggplotly(p,tooltip = 'text')
 
 # Jobs (predictor): Southern CA Edison Co.
 
-```{r,echo=F,warning=F,message=F,fig.align='center',fig.width=16,fig.height=7,dpi=72}
+```{r,echo=F,warning=F,message=F,fig.align='center',fig.width=16,fig.height=6.5,dpi=72}
 toplot <- dt %>%
   filter(par_ABI == 6066187)
 
@@ -640,7 +652,7 @@ ggplotly(p,tooltip = 'text')
 
 # Jobs (predictor): U-Haul
 
-```{r,echo=F,warning=F,message=F,fig.align='center',fig.width=16,fig.height=7,dpi=72}
+```{r,echo=F,warning=F,message=F,fig.align='center',fig.width=16,fig.height=6.5,dpi=72}
 toplot <- dt %>%
   filter(par_ABI == 409125614)
 
