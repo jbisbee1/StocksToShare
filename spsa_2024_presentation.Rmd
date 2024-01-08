@@ -35,6 +35,7 @@ output:
   background-color: #272822;
   color: #d6d6d6;
   text-shadow: 0 0 20px #333;
+  background-image: none!important;
 }
 
 .huge {
@@ -65,10 +66,11 @@ require(ggpubr)
 ```
 
 ```{r xaringanExtra, echo = FALSE}
-  xaringanExtra::use_progress_bar(color = "#866D4B", location = "top")
+  # xaringanExtra::use_progress_bar(color = "#866D4B", location = "top")
   xaringanExtra::use_banner(
     top_left = "Stocks and Jobs: SPSA 2024",
     top_right = "Bisbee & Clinton",
+    bottom_left = "[Link](https://www.jamesbisbee.com/StocksToShare/spsa_2024_presentation.html)",
     exclude = c("title-slide")
   )
 ```
@@ -260,7 +262,9 @@ require(ggpubr)
   a. Conversely, they're not very good at it (Eggers & Hainmueller, [2013](https://www.journals.uchicago.edu/doi/abs/10.1017/S0022381613000194?casa_token=TBHP6VNA7jgAAAAA%3AhVwvX9_bK3EgZaKmYzid5my0uxcrl5Ey7OxPZty5XiPFCu1LqbDtoQ9VJz9s_A9k9IgLxamCcmmQ&journalCode=jop))
   
   b. **Puzzle #1**: Which is it?
-  
+
+--
+
 2. They invest more in firms headquartered in their district (Eggers & Hainmueller, [2014](https://web.stanford.edu/~jhain/Paper/QJPS2014.pdf))
 
   a. These stocks **do** outperform market and rest of their portfolio, but no evidence for insider trading specifically.
@@ -992,7 +996,7 @@ class: inverse
 
   - Stock options are 272 out of 12,104 total transactions in the trial data.
 	
-	- We also have information on the financial instrument, although the majority are missing, followed by CLASS A
+	- We also have information on financial instrument, although majority are missing, followed by CLASS A
 	
 --
 
