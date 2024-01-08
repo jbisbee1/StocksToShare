@@ -79,12 +79,12 @@ require(ggpubr)
 
 ```{r xaringanExtra, echo = FALSE}
   xaringanExtra::use_progress_bar(color = "#866D4B", location = "top")
-  xaringanExtra::use_banner(
-    bottom_left = "Stocks and Jobs: SPSA 2024",
-    bottom_center = "Bisbee & Clinton",
-    # bottom_left = "jamesbisbee.com/StocksToShare/spsa_2024_presentation",
-    exclude = c("title-slide")
-  )
+  # xaringanExtra::use_banner(
+  #   bottom_left = "Stocks and Jobs: SPSA 2024",
+  #   bottom_center = "Bisbee & Clinton",
+  #   # bottom_left = "jamesbisbee.com/StocksToShare/spsa_2024_presentation",
+  #   exclude = c("title-slide")
+  # )
 ```
 
 
